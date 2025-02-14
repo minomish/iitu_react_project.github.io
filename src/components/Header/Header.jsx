@@ -54,8 +54,8 @@ const Header = () => {
 
     return (
         <header>
-            <a href="#home">
-                <img src="/IITU_Black_Red_Logo.png" alt="logo" className="logo" />
+            <a href="#about">
+                <img src="IITU_Black_Red_Logo.png" alt="logo" className="logo" />
             </a>
 
             <nav className={menuOpen ? "nav open" : "nav"}>
