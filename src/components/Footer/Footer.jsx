@@ -5,6 +5,8 @@ import Facebook from "../../assets/icons/socials/Facebook";
 import Twitter from "../../assets/icons/socials/Twitter";
 import Instagram from "../../assets/icons/socials/Instagram";
 
+import { Link } from 'react-scroll';
+
 const contactInfo = [
     { text: "IITU University", isLogo: true },
     { text: "+7(999)-999-99-99", url: "#", className: "link_title" },
@@ -18,11 +20,7 @@ const socialIcons = [Insta, Facebook, Twitter, Instagram].map((Icon, i) => (
     </a>
 ));
 
-const navigationSections = [
-    { title: "Company", links: ["About Us", "Course Info", "Course Enrollment", "Faculty"] }
-];
-
-export const Footer = () => (
+const Footer = () => (
     <footer className="mainFooterContainer">
         <div className="footer_container">
             <div className="link_container">
@@ -38,17 +36,14 @@ export const Footer = () => (
                 <div className="social_icons">{socialIcons}</div>
             </div>
             <div className="navigation_columns">
-                {navigationSections.map(({ title, links }, i) => (
-                    <div key={i} className="navigation_section">
-                        <span className="link_title">{title}</span>
-                        {links.map((link, j) => (
-                            <a key={j} href="#">
-                                {link}
-                            </a>
-                        ))}
+                    <div className="navigation_section">
+                        <span className="link_title">Company</span>
+                        <Link to="about" smooth={true} duration={500} offset={-100}>About Us</Link>
+                        <Link to="course-info" smooth={true} duration={500} offset={-100}>Course Info</Link>
+                        <Link to="course-enrollment" smooth={true} duration={500} offset={-100}>Course Enrollment</Link>
+                        <Link to="faculty" smooth={true} duration={500} offset={-100}>Faculty</Link>
                     </div>
-                ))}
-            </div>
+                </div>
         </div>
         <div className="footer_copyright_container">
             <div className="footerBottomLine"></div>
@@ -58,3 +53,5 @@ export const Footer = () => (
         </div>
     </footer>
 );
+
+export default Footer

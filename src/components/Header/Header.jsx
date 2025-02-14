@@ -59,13 +59,13 @@ const Header = () => {
             </a>
 
             <nav className={menuOpen ? "nav open" : "nav"}>
-                <Link to="about" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>About Us</Link>
-                <Link to="course-info" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Course Info</Link>
-                <Link to="course-enrollment" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Course Enrollment</Link>
-                <Link to="faculty" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Faculty</Link>
+                <Link to="about" smooth={true} duration={500} offset={-100} onClick={() => setMenuOpen(false)}>About Us</Link>
+                <Link to="course-info" smooth={true} duration={500} offset={-100} onClick={() => setMenuOpen(false)}>Course Info</Link>
+                <Link to="course-enrollment" smooth={true} duration={500} offset={-100} onClick={() => setMenuOpen(false)}>Course Enrollment</Link>
+                <Link to="faculty" smooth={true} duration={500} offset={-100} onClick={() => setMenuOpen(false)}>Faculty</Link>
             </nav>
 
-            <a href="#register" className={menuOpen ? 'reg-btn open' : "reg-btn"}>REGISTER FOR COURSE</a>
+            <Link to="course-enrollment" smooth={true} duration={500} offset={-100} className={menuOpen ? 'reg-btn open' : "reg-btn"}>REGISTER FOR COURSE</Link>
 
             <i className={menuOpen ? "material-icons open" : "material-icons"} onClick={handleMenu}>
                 {menuOpen ? "close" : "menu"}

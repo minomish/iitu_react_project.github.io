@@ -4,6 +4,11 @@ body{
   margin: 0 ;
   padding: 0;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
 
 @media (max-width: 819px) {
   .wrapper {
@@ -22,5 +27,4 @@ body{
   .wrapper{
       padding: 0 140px;
   }
-
 }
